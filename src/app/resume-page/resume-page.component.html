@@ -1,0 +1,89 @@
+<section class="pageheading">
+<h1 class="titlec">Resume</h1>
+</section>
+
+<section id="Skills" class="section animated" style="background-color: #d3d3d3;"
+animateOnScroll animationName="fadeIn">
+<div class="container is-widescreen">
+<h2 class="title is-1 heading-wide" style="text-align:center">Skills</h2>
+<div class="columns">
+  <div class="column is-centered" [style.margin]="(isHandset$ | async) ? '10px' : '0 25% 0 25%'">
+    <mat-chip-list>
+      <mat-chip
+        class="skillchip"
+        color="accent" selected
+        *ngFor="let skill of skills">
+        <img *ngIf="skill.logo" [src]="skill.logo" class="chipimg" alt="logo">{{skill.name}}
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+  <br>
+  <div class="column is-centered" [style.margin]="(isHandset$ | async) ? '10px' : '0 25% 0 25%'">
+    <mat-chip-list>
+      <mat-chip
+        class="skillchip"
+        color="primary" selected
+        *ngFor="let skill of programs">
+        <img *ngIf="skill.logo" [src]="skill.logo" class="chipimg" alt="logo">{{skill.name}}
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+</div>
+</div>
+</section>
+
+
+<section id="Me" class="section animated" style="background-color: #d3d3d3;"
+animateOnScroll animationName="fadeIn">
+<h2 class="title is-1 heading-wide">About Me</h2>
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div class="column is-narrow" [style.margin-left]="(isHandset$ | async) ? '30%' : '15%'">
+    <img class="profile-pic" src="assets/pvz.jpg" alt="photo of her">
+  </div>
+  <div class="column is-half" fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%" fxFlexAlign="center" style="margin-left:20px">
+    I am a very creative person, this is reflected in my front end design and my unique approach to problem solving. I worked as a freelance developer on multiple Blockchain projects. I am highly motivated and have also worked part time as an IT Technician, on Cryptographic PoW mining systems (SHA256 & ETHASH), providing a lot of technical support, network setups and sharing for local businesses.   <div class="is-centered" style='margin-left: 25%; margin-top: 10px'>
+  <button class="button" fxFlexAlign="center" style="background-color: #FF8340;" (click)="downloadFile()" mat-button>  <mat-icon>get_app</mat-icon>Download PDF Resume</button>
+
+</div>
+</div>
+</div>
+</section>
+
+<section id="Adventures" class="section animated"       animateOnScroll animationName="fadeIn">
+<div class="container is-widescreen" style='display:flex' fxLayout="row wrap">
+<div class='workcol' [style.width]="(isHandset$ | async) ? '100%' : '45%'">
+<h1 class="title is-1 heading-wide">Experience</h1>
+<div class="content" fxLayout="column wrap" fxLayoutGap="16px grid">
+<div fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%" *ngFor="let experience of workexperiences">
+  <mat-card class="mat-elevation-z6" class='workexpcard' >
+    <mat-card-header>
+      <mat-card-title>{{experience.title}}</mat-card-title>
+      <mat-card-subtitle><strong style="color:#007074">{{experience.date}} |</strong>  {{experience.company}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p [innerHTML]="experience.paragraph"></p>
+    </mat-card-content>
+  </mat-card>
+</div>
+</div>
+</div>
+<div class='educationcol' [style.width]="(isHandset$ | async) ? '100%' : '45%'">
+  <h1 class="title is-1 heading-wide">Education</h1>
+  <div class="content" fxLayout="column wrap" fxLayoutGap="16px grid">
+  <div fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%" *ngFor="let experience of educationexperiences">
+    <mat-card class="mat-elevation-z6" class='workexpcard'>
+      <mat-card-header>
+        <mat-card-title>{{experience.title}}</mat-card-title>
+        <mat-card-subtitle><strong style="color:#007074">{{experience.date}} |</strong>  {{experience.company}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p [innerHTML]="experience.paragraph"></p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  </div>
+  </div>
+</div>
+</section>
+
+

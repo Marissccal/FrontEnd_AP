@@ -1,0 +1,434 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  z-index: 0;
+  display: block;
+  background: url("/assets//background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.colour-overlay {
+  background: #40ffe6;
+  background: -webkit-linear-gradient(to right, #e3591e, #019fa9);
+  background: linear-gradient(to right, #e3591e,  #019fa9);
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.container-info {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+
+
+.info-block {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: table;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+.info-block-container {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 200px;
+  -ms-transform: rotate(34deg);
+  -webkit-transform: rotate(34deg);
+  transform: rotate(34deg);
+}
+
+.info-block-container h1 {
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+.info-block-container h1, .info-block-container h2 {
+  text-transform: capitalize;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.info-block-container h1 span, .info-block-container h2 {
+  font-size: 22px;
+  min-height: 22px;
+}
+
+.info-block-container h1 span {
+  font-size: 26px;
+  font-weight: 300;
+  display: block;
+  text-transform: capitalize;
+}
+
+.info-block-container h1, .info-block-container h2 {
+  text-transform: capitalize;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 26px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.menu-blocks {
+  transition: all 0.5s;
+}
+
+.menu-block {
+  cursor: pointer;
+}
+
+.about-block {
+  box-sizing: border-box;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom-color: rgba(255, 255, 255, 0.2);
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+  border-bottom: none;
+  display: table;
+  transition: all 0.5s;
+  z-index: 99;
+}
+.about-block-container {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 100px 0 0 70px;
+  -ms-transform: rotate(34deg);
+  -webkit-transform: rotate(34deg);
+  transform: rotate(34deg);
+
+}
+
+/*Creates the 3rd hover effect for the menu tiles*/
+.about-block:hover {
+  border: 15px solid rgba(255, 255, 255, 0.1);
+}
+.portfolio-block:hover {
+  border: 15px solid rgba(255, 255, 255, 0.1);
+}
+.api-block:hover {
+  border: 15px solid rgba(255, 255, 255, 0.1);
+}
+.menu-block:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/*Set menu item numbers 01-03*/
+h2.about.menu-item::before {
+  content: "01";
+}
+h2.portfolio.menu-item::before {
+  content: "02";
+}
+h2.api.menu-item::before {
+  content: "03";
+}
+
+/*handles menu-item position before hover*/
+h2.menu-item::before {
+  position: absolute;
+  top: -40px;
+  left: -20px;
+  font-size: 14px;
+  transition: all 0.5s ease 0s;
+}
+/*moves menu-item position after hover*/
+h2.menu-item::after {
+  position: absolute;
+  content: "";
+  top: -10px;
+  left: -20px;
+  width: 70px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.5s ease 0s;
+}
+
+/*Menu-item line and initialization*/
+h2.menu-item {
+  position: relative;
+  color: rgb(255, 255, 255);
+  margin: 50px;
+  font-size: 28px;
+  font-weight: 600;
+  transition: all 1s ease-out 0s;
+}
+
+/* Puts the Menu item number above the line and text before*/
+.menu-block:hover h2.menu-item:before {
+  top: -20px;
+  left: -40px;
+}
+
+
+
+.portfolio-block {
+  box-sizing: border-box;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom-color: rgba(255, 255, 255, 0.2);
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+  border-bottom: none;
+  display: table;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+.portfolio-block-container {
+  display: table-cell;
+  padding: 100px 0 0 70px;
+  vertical-align: middle;
+  -ms-transform: rotate(34deg);
+  -webkit-transform: rotate(34deg);
+  transform: rotate(34deg);
+}
+
+.api-block{
+  box-sizing: border-box;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: table;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+.api-block-container {
+  display: table-cell;
+  padding: 100px 0 0 70px;
+  vertical-align: middle;
+  -ms-transform: rotate(34deg);
+  -webkit-transform: rotate(34deg);
+  transform: rotate(34deg);
+}
+
+
+
+/* @media (max-width:1024px) {
+  .name-block-container h1 {
+      font-size: 40px;
+      line-height: 1.1;
+  }
+} */
+
+/* Max-width 960 if min width = 992 */
+/* Max-width 720 if min width = 768 */
+/* Max-width 540 if min width = 576 */
+
+
+
+
+
+@media (min-width:1280px) {
+  .info-block {
+    width: 700px;
+    height: 700px;
+    -ms-transform: rotate(-34deg);
+    -webkit-transform: rotate(-34deg);
+    transform: rotate(-34deg);
+    left: 60px;
+    top: 100px;
+  }
+  .about-block {
+    width: 400px;
+    height: 260px;
+    -ms-transform: rotate(-34deg);
+    -webkit-transform: rotate(-34deg);
+    transform: rotate(-34deg);
+    left: 605px;
+    top: -80px;
+  }
+  .portfolio-block {
+    width: 500px;
+    height: 260px;
+    -ms-transform: rotate(-34deg);
+    -webkit-transform: rotate(-34deg);
+    transform: rotate(-34deg);
+    left: 742px;
+    top: 109px;
+  }
+  .api-block{
+    width: 600px;
+    height: 260px;
+    -ms-transform: rotate(-34deg);
+    -webkit-transform: rotate(-34deg);
+    transform: rotate(-34deg);
+    left: 879px;
+    top: 297px;
+  }
+}
+
+@media (min-width:900px) and (max-width: 1279px) {
+  .info-block {
+    width: 500px;
+    height: 500px;
+    -ms-transform: rotate(-34deg);
+    -webkit-transform: rotate(-34deg);
+    transform: rotate(-34deg);
+    left: 40px;
+    top: 132px;
+  }
+  .about-block {
+    width: 270px;
+    height: 200px;
+    -ms-transform: rotate(-34deg);
+    -webkit-transform: rotate(-34deg);
+    transform: rotate(-34deg);
+    left: 387px;
+    top: -80px;
+  }
+  .portfolio-block {
+    width: 370px;
+    height: 293px;
+    -ms-transform: rotate(-34deg);
+    -webkit-transform: rotate(-34deg);
+    transform: rotate(-34deg);
+    left: 525px;
+    top: 80px;
+  }
+  .api-block{
+    width: 700px;
+    height: 200px;
+    -ms-transform: rotate(-34deg);
+    -webkit-transform: rotate(-34deg);
+    transform: rotate(-34deg);
+    left: 368px;
+    top: 420px;
+  }
+  .api-block-container {
+    padding: 100px 0 0 120px;
+  }
+.info-block-container {
+    padding-left: 100px;
+  }
+}
+
+@media (max-width:899px) and (min-width:600px){
+
+  .info-block {
+    width: 100%;
+    height: 25%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .about-block {
+    width: 50%;
+    height: 37.5%;
+    top: 25%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+
+  }
+
+  .portfolio-block {
+    width: 50%;
+    height: 37.5%;
+    top: 25%;
+    left: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .api-block{
+    width: 100%;
+    height: 37.5%;
+    top:62.5%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .info-block-container{
+    vertical-align: middle;
+    transform: rotate(0deg);
+    padding-left:25%;
+}
+
+.about-block-container{
+  vertical-align: middle;
+  transform: rotate(0deg);
+}
+
+.portfolio-block-container{
+  vertical-align: middle;
+  transform: rotate(0deg);
+}
+
+.api-block-container{
+  vertical-align: middle;
+  transform: rotate(0deg);
+}
+
+}
+
+@media (max-width:599px) and (min-width:300px){
+
+  .info-block {
+    width: 100%;
+    height: 25%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .about-block {
+    width: 100%;
+    height: 25%;
+    top: 25%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+
+  }
+
+  .portfolio-block {
+    width: 100%;
+    height: 25%;
+    top: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .api-block{
+    width: 100%;
+    height: 37.5%;
+    top:75%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+  }
+
+.info-block-container{
+    vertical-align: middle;
+    transform: rotate(0deg);
+    padding-left:0px;
+    text-align:center;
+}
+
+.about-block-container{
+  vertical-align: middle;
+  transform: rotate(0deg);
+  padding: 0px;
+}
+
+.portfolio-block-container{
+  vertical-align: middle;
+  transform: rotate(0deg);
+  padding: 0px;
+}
+
+.api-block-container{
+  vertical-align: middle;
+  transform: rotate(0deg);
+  padding: 0px;
+}
+
+}
