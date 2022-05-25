@@ -11,13 +11,13 @@ import { persona } from '../modelos/persona.model';
 
 export class PersonaService {
  
-  URL = 'http://localhost:8080/personas/';
+  URL = 'https://backend-edit-ap.herokuapp.com/';
 
   constructor(private http: HttpClient) { }
 
   public getPersona(): Observable<persona> {
 
-    return this.http.get<persona>(this.URL+ 'traer/perfil');
+    return this.http.get<persona>(this.URL+ 'personas/traer/perfil');
 
     
   } 
