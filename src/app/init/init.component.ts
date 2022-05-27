@@ -13,8 +13,8 @@ export class InitComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private ruta:Router, private autenticacionService:AutenticacionService) {
     this.form=this.formBuilder.group(
       {
-        username:['mariscal',[Validators.required, Validators.minLength(3)]],
-        password:['17118224',[Validators.required, Validators.minLength(8)]],     
+        username:['',[Validators.required, Validators.minLength(3)]],
+        password:['',[Validators.required, Validators.minLength(8)]],     
                          
       }
     )
