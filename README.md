@@ -15,9 +15,11 @@ para el funcionamiento de sus APIs, pudiendo solo enviar en la presentación la 
 Portfolio, y tambien anexo la URL del repo perteneciente a la API de Twitter, que si bien tanto la de ésta como la de CORE estan terminadas en el FrontEnd, por razones de
 tiempo, no alcance a terminar y deployar los Backend:
 
-		Repo API Twitter: https://github.com/Marissccal/API-Twitter.git
-    
-    URL API Editar Nombre Principal: https://backend-edit-ap.herokuapp.com/
+```bash
+Repo API Twitter: https://github.com/Marissccal/API-Twitter.git
+URL API Editar Nombre Principal: https://backend-edit-ap.herokuapp.com/
+URL API JWT para Login: https://backend-security-ap.herokuapp.com/
+```
 
        
 
