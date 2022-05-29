@@ -34,8 +34,19 @@ y estados de mis redes sociales (Twitter en este caso).
 
 - **Modo desarrollo**
     
-    1 - Correr ´npm install´
-    2 - Ejecutar  ´ng serve´ o ´npm start´ para un servidor de desarrollo. Navegar a  ´http://localhost:4200/´. La aplicación se recargará automáticamente si cambia alguno de los archivos de origen.
+Correr.
+
+```bash
+npm install
+```
+
+Ejecutar.
+
+```
+ng serve o npm start
+```
+para un servidor de desarrollo. Navegar a  ´http://localhost:4200/´. La aplicación se recargará automáticamente si cambia alguno de los archivos de origen.
+
 
 - **API complementaria**
 
